@@ -1,0 +1,164 @@
+/* ====== COLOR SYSTEM (LIGHT THEME) ====== */
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f6f7f9;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --primary: #3b82f6;    /* blue */
+  --primary-hover: #2563eb;
+  --border: #e5e7eb;
+  --card-bg: #ffffff;
+  --radius: 12px;
+
+  --transition: 0.25s ease;
+  --shadow: 0px 4px 15px rgba(0,0,0,0.08);
+}
+
+/* ====== GLOBAL ====== */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+section {
+  padding: 80px 120px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 50px 20px;
+  }
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  width: 100%;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navbar ul li a:hover {
+  color: var(--primary);
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  background: var(--bg-secondary);
+  padding: 120px 120px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 22px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.hero .cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-size: 16px;
+}
+
+.button.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button.primary:hover {
+  background: var(--primary-hover);
+}
+
+.button.secondary {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.button.secondary:hover {
+  background: var(--bg-secondary);
+}
+
+/* ====== CARDS ====== */
+.card {
+  background: var(--card-bg);
+  padding: 20px 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ====== GRID ====== */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}

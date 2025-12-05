@@ -9,10 +9,12 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="section">
-      <h2>{`<AboutMe />`}</h2>
-      {about.map(item => (
-        <p key={item.id}>{item.description}</p>
+    <section id="about">
+      <h2>About Me</h2>
+      {about.map((item) => (
+        <p key={item.id} style={{ maxWidth: "700px", lineHeight: "1.6" }}>
+          {item.description}
+        </p>
       ))}
     </section>
   );

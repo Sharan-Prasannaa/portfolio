@@ -5,3 +5,12 @@ export const fetchAbout = () =>
 
 export const fetchSkills = () =>
   fetch(API_URL + "skills/").then(res => res.json());
+
+export const fetchContact = () =>
+  fetch(API_URL + "contact/").then(res => res.json());
+
+export const fetchExperience = () =>
+  fetch(API_URL + "contact/").then(res => res.json());
+
+export const fetchProjects = () =>
+  fetch(API_URL + "contact/").then(res => res.json());
